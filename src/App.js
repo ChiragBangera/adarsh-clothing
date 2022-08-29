@@ -1,7 +1,44 @@
 const App = ()=> {
+
+  const cats = [
+    {
+      id:1,
+      title:'Hats'
+    },
+    {
+      id:2,
+      title:'Jackets'
+    },
+    {
+      id:3,
+      title:'Sneakers'
+    },
+    {
+      id:4,
+      title:'Womens'
+    },
+    {
+      id:5,
+      title:'Mens'
+    },
+
+  ]
+
+
+
   return (
-    <div className="App">
-      Hello World
+    <div className="categories-container">
+    {cats.map(({title,id})=>{
+      return (
+        <div className="category-container">
+        <div className="background-image"/>
+        <div className="category-body-container">
+        <h2 key={id}>{title}</h2>
+        <p>ShopNow</p>
+        </div>
+      </div>
+      )
+    })}
     </div>
   );
 }
